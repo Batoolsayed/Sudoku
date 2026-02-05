@@ -1,0 +1,23 @@
+
+h1{
+    text-align: center;
+    ;
+}
+
+.squ{
+    display: grid;
+    grid-template-columns: repeat(9, auto);
+    width: 225px;
+    margin: auto;
+
+}
+
+.sq{
+    width: 80px;
+    height: 80px;
+    border: 2px solid rgb(39, 39, 39);
+    text-align: center;
+    font-size: 48px;
+    background-color: rgb(189, 188, 188);
+
+}
