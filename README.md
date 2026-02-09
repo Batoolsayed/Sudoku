@@ -6,13 +6,12 @@
 
 ##### data: 2/5/2026
 
-# the game look like this :
+# the game look like this :(1)
 ![alt text](Screenshot_20260205_155354_Sudoku.jpg)
 
 # discretion the game :
 
 - But the right number that make line and the squ that have num from 1 to 9 without  repeat.
-
 
 
  #### * not repeat the num in the 
@@ -38,8 +37,16 @@ board ={
     [1,0,0,0,0,9,5,7,0]
 
 }
+ 
+* take the number form the board and put this number in the sq without 0 value and if 0 put function click and choose the number from card under the board. 
 
- * if the board =  answer
+* and chick the number from board  if = to the answer .....trus 
+* and if wrong .....error (in the css red in the sq(number)) 
+
+* the button make reset 
+
+
+
 ##  function:
 - 
 - function game() =  {
@@ -54,6 +61,21 @@ for(let i=0; i< 9 ; i++) {
 
 - 
 
-## the answer:
+## the answer:(1)
 ![alt text](Screenshot_20260205_155915_Sudoku.jpg)
+
+
+
+## to improve the game:
+- hard ,easy ,mid (i will put from the sudoku)all number.
+- light when i click the number
+- choose the answer in different color 
+- 9 squares
+
+Monday: work on the css
+write the function in the javascript.
+
+### source:
+- (1) [idea and picture] sudoku game from my phone 
+
 
