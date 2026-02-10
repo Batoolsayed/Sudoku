@@ -77,5 +77,5 @@ write the function in the javascript.
 
 ### source:
 - (1) [idea and picture] sudoku game from my phone 
-
+- [w3schools] https://www.w3schools.com/jsref/met_document_addeventlistener.asp
 
