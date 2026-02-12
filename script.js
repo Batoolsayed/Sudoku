@@ -31,37 +31,45 @@ let answer = [
 
 ];
 
-const cardBtn  = [1,2,3,4,5,6,7,8,9]
 
-let squ = document.getElementById('squ')
+let squ = document.querySelector('#squ')
 let card = document.querySelector('.card');
 let sq = document.querySelectorAll('.sq');
 let c = document.querySelectorAll('.c');
 const h1 = document.querySelector('#h1')
 
+const h3 = document.querySelector('#mistake')
+
+const win =false;
+
 let index=0;
 
-let n = null;
-let select =-1;
+let n= null;
+let select = 0;
 
 
 for (let i=0; i<9; i++){
     for (let j=0; j<9; j++){
         if(board[i][j]!==0){
-sq[index].textContent = board[i][j];}
+      sq[index].textContent = board[i][j];
+
+      /* sq[index].Style.backgroundColor='#cacaca';  */
+}
+
 index ++;
+        
     }};
 
 
 
-for (let i=0; i < sq.length ;i++){
+for (let i=0; i< sq.length ;i++){
     sq[i].addEventListener('click', function(){
             
         if(sq[i].textContent !=='') return ;
 
             n=sq[i];
             select=i;
-            h1.textContent='';
+            h1.textContent="";
 });
 
 }
@@ -69,24 +77,70 @@ for (let i=0; i < sq.length ;i++){
 
 
 let row,col;
-
-for(let i=0; i < c.length; i++){
+let  b=0;
+for(let i=0; i< c.length; i++){
+   
     c[i].addEventListener('click', function(){
             if(select == null ) return;
 
               row = Math.floor(select / 9);
               col= select % 9;
 
-        if(c[i].textContent== answer[row][col]){
-            select.textContent = c[i].textContent;
+        if(c[i].textContent == answer[row][col]){
+    
+            sq[select].textContent = c[i].textContent;
             h1.textContent='correct';
+
+
+            if (check()){
+                h1.textContent ='win';
+            }
+
+
+            ////
+            
+            var sound = new Audio();
+            sound.src= 'mixkit-unlock-game-notification-253.wav'; 
+            sound.play();
+            /////
+
+
+
         }
+
          else {
-            select.textContent='';
-            h1.textContent='wrong';
+
+            sq[select].textContent ='';
+            h1.textContent ='wrong';
+            b++;
+            
+            console.log(b)
+            h3.textContent = 'mistakes: ' + b ;
+           
+
+
          }
 
-        });}
+        });
+        
+       
+    }
 
-  
 
+ 
+   
+     function check(){
+        for(let i=0; i< sq.length; i++){
+
+
+        if(sq[i].textContent === ''){
+
+return false;
+    }
+        } 
+    
+    return true;
+    
+    }
+
+ 
